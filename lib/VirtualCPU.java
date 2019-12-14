@@ -51,7 +51,8 @@ public class VirtualCPU{
 
     public String pullFromStack(int index){
         String str = stack.get(index);
-        stack.remove(index);
+        //stack.remove(index);
+        pull(index);
         return str;
     }
 
