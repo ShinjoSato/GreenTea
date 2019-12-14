@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
-public class VirtualCPU{
+public class VirtualRAM{
     
     private ArrayList<Integer> values;
     private ArrayList<String> stack;
 
-    public VirtualCPU(){
+    public VirtualRAM(){
         this.values = new ArrayList<Integer>();
         this.stack = new ArrayList<String>();
     }
@@ -51,7 +51,6 @@ public class VirtualCPU{
 
     public String popFromStack(int index){
         String str = stack.get(index);
-        //stack.remove(index);
         pop(index);
         return str;
     }
