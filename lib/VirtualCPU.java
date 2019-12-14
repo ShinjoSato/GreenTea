@@ -40,29 +40,29 @@ public class VirtualCPU{
         return str;
     }
 
-    public void pull(int index){
+    public void pop(int index){
         stack.remove(index);
         values.remove(index);
     }
 
-    public String pullFromStack(){
-        return pullFromStack(stack.size() - 1);
+    public String popFromStack(){
+        return popFromStack(stack.size() - 1);
     }
 
-    public String pullFromStack(int index){
+    public String popFromStack(int index){
         String str = stack.get(index);
         //stack.remove(index);
-        pull(index);
+        pop(index);
         return str;
     }
 
-    public int pullFromValues(){
-        return pullFromValues(values.size() - 1);
+    public int popFromValues(){
+        return popFromValues(values.size() - 1);
     }
 
-    public int pullFromValues(int index){
+    public int popFromValues(int index){
         int num = values.get(index);
-        pull(index);
+        pop(index);
         return num;
     }
 
