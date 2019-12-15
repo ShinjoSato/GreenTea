@@ -1,0 +1,8 @@
+int A = ( ( 10 - 3 ) + 2 + 1 ) , B = 3 / 3 * 2 ;
+int C = A - B ;
+double D = 1 - 10 ;
+int E = ( ( 1 + 2 ) * ( 1 + 2 + 1 * 2 ) ) + 2 * 2 , F = ( ( D - A ) + E ) , G = 5 + 3 * 6 * ( 8 * 2 + 1 ) ;
+println ( A ) ;
+println ( B ) ;
+println ( C ) ;
+println ( " Hello World. This is a pen. " ) ; 

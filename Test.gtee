@@ -1,4 +1,0 @@
-main ( String[] args ) {
-    A = 10 ;
-    print( A ) ;
-}

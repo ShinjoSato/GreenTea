@@ -19,8 +19,16 @@ public class VirtualRAM{
         this.stack.add(index, str);
     }
 
+    public ArrayList<Integer> getValues(){
+        return values;
+    }
+
     public int getValue(int index){
         return values.get(index);
+    }
+
+    public ArrayList<String> getStack(){
+        return stack;
     }
 
     public String getStack(int index){

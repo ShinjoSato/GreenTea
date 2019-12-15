@@ -2,6 +2,41 @@ import java.util.ArrayList;
 import java.util.Arrays;
 public class Calculator{
     /**
+     * This function define the type of the variable.
+     * @param ram
+     * @return ram
+     */
+    public static VirtualRAM defineTypeOfValue(VirtualRAM ram){
+        int index = ram.size()-1;
+        /**
+         * While the index number doesn't show type, i.e. int and double, 
+         * index subtracts 1.
+         */
+        while(!(ram.getStack(index).equals("int")||ram.getStack(index).equals("double"))){
+            index--;
+        }
+        String type = ram.popFromStack(index);
+        /**
+         * While the index number is smaller than ram size,
+         * the symbols in the index are defined as the type.
+         */
+        while(index < ram.size()){
+            switch(type){
+                case "int":{
+                    //System.out.println("integer "+ram.getValue(index));
+                    break;
+                }
+                case "double":{
+                    //System.out.println("double "+ram.getValue(index));
+                    break;
+                }
+            }
+            index++;
+        }
+        return ram;
+    }
+
+    /**
      * In this function, the numbers in ram are calculate by Reverse Polish Notation (RPN).
      * The last of the stack in ram is "," or ";".
      * @param ram       It contains numbers and operands.
@@ -57,6 +92,11 @@ public class Calculator{
                             break;
                 default:    i++;
             }
+
+            for(int j=0; j<ram.size(); j++){
+                System.out.print(ram.getStack(j) + " ");
+            }
+            System.out.println();
         }
         return ram;
     }
@@ -97,6 +137,12 @@ public class Calculator{
                         }
                         stack.remove(stack.size()-1);
                         break;
+                    /*case "+":
+                    case "-":
+                        if(stack.size()>0){
+                            queue.add(stack.get(stack.size()-1));
+                            stack.remove(stack.size()-1);
+                        }*/
                     default:
                         while(stack.size()>0 && Arrays.asList(level2).contains( stack.get(stack.size()-1))){
                             queue.add(stack.get(stack.size()-1));

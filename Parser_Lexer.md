@@ -1,19 +1,16 @@
 # Lexicul
 
 ## Parser tokens
+1. function
+   - main
 
-1. Group 1
-    - IDENTIFIER
-    - INTEGER LITERAL
-    - STARING LITERAL
-    - END OF FILE
+2. indentifier
+    - int
+    - main
+    - print
+    - println
 
-2. Group 2
-    - if
-    - while
-    - return
-    - var
-3. Group 3
+3. symbol
     - ( and )
     - [ and ]
     - { and }
